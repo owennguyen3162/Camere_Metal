@@ -186,63 +186,93 @@ class VideoWriter {
     }()
     
     private func initVideoWriter(_ url: URL) {
-        self.firstFrame = false
-        guard let presetSettingEncoder = self.presetSettingEncoder else {
-            print("[Camera engine] presetSettingEncoder = nil")
-            return
-        }
-        
+        firstFrame = false
         do {
-            self.assetWriter = try AVAssetWriter(url: url, fileType: AVFileType.mp4)
-        }
-        catch {
+            assetWriter = try AVAssetWriter(url: url, fileType: .mp4)
+        } catch {
             fatalError("error init assetWriter")
         }
-        
-        assetWriter.shouldOptimizeForNetworkUse = shouldOptimizeForNetworkUse
-        
-        var videoOutputSettings = presetSettingEncoder.videoSettings!
-        let audioOutputSettings = presetSettingEncoder.audioSettings
-        
-//        let settings:[String: Any] = [
-//            AVVideoAverageBitRateKey : 10 * 1024 * 1024,
-//             AVVideoExpectedSourceFrameRateKey : NSNumber.init(value:120)
-//        ]
-//        videoOutputSettings[String(AVVideoCompressionPropertiesKey)] = settings
+        lazy var presetSettingEncoder: AVOutputSettingsAssistant? = {
+            return VideoEncoderEncoderSettings.Preset1280x720.configuration()
+        }()
 
-        
-        guard self.assetWriter.canApply(outputSettings: videoOutputSettings, forMediaType: AVMediaType.video) else {
-            fatalError("Negative [VIDEO] : Can't apply the Output settings...")
+        let videoOutputSettings = AVOutputSettingsAssistant(
+            preset: .hevc1920x1080
+        )!.videoSettings!
+
+        if assetWriter.canApply(outputSettings: videoOutputSettings, forMediaType: .video) {
+            self.videoInputWriter = AVAssetWriterInput(
+                mediaType: .video,
+                outputSettings: videoOutputSettings
+            )
+        } else {
+
         }
-        guard self.assetWriter.canApply(outputSettings: audioOutputSettings, forMediaType: AVMediaType.audio) else {
-            fatalError("Negative [AUDIO] : Can't apply the Output settings...")
+
+        if assetWriter.canAdd(self.videoInputWriter) {
+            assetWriter.add(self.videoInputWriter)
         }
-        
-        self.videoInputWriter = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoOutputSettings)
-        self.videoInputWriter.expectsMediaDataInRealTime = true
-        self.videoInputWriter.transform = CGAffineTransform(rotationAngle: UIDevice.orientationTransformation())
-        
-        self.audioInputWriter = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: audioOutputSettings)
-        self.audioInputWriter.expectsMediaDataInRealTime = true
-        
-        if self.assetWriter.canAdd(self.videoInputWriter) {
-            self.assetWriter.add(self.videoInputWriter)
-        }
-        if self.assetWriter.canAdd(self.audioInputWriter) {
-            self.assetWriter.add(self.audioInputWriter)
-        }
-        
-//        let sourcePixelBufferAttributesDictionary: [String : Any] = [
-//            String(kCVPixelBufferPixelFormatTypeKey) : Int(kCVPixelFormatType_32BGRA),
-//            String(kCVPixelBufferWidthKey) : Int(720),
-//            String(kCVPixelBufferHeightKey) : Int(1280),
-//            String(kCVPixelFormatOpenGLESCompatibility) : kCFBooleanTrue
-//        ]
-        
-//        assetWriterPixelBufferInput = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoInputWriter, sourcePixelBufferAttributes: sourcePixelBufferAttributesDictionary)
-        assetWriterPixelBufferInput = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoInputWriter)
+
+//        if self.assetWriter.canAdd(self.audioInputWriter) {
+//            self.assetWriter.add(self.audioInputWriter)
+//        }
+        assetWriterPixelBufferInput = AVAssetWriterInputPixelBufferAdaptor(
+            assetWriterInput: videoInputWriter
+        )
 
     }
+//    private func initVideoWriter(_ url: URL) {
+//        self.firstFrame = false
+//        guard let presetSettingEncoder = self.presetSettingEncoder else {
+//            print("[Camera engine] presetSettingEncoder = nil")
+//            return
+//        }
+//        
+//        do {
+//            self.assetWriter = try AVAssetWriter(url: url, fileType: AVFileType.mp4)
+//        }
+//        catch {
+//            fatalError("error init assetWriter")
+//        }
+//        
+//        assetWriter.shouldOptimizeForNetworkUse = shouldOptimizeForNetworkUse
+//        
+//        var videoOutputSettings = presetSettingEncoder.videoSettings!
+//        let audioOutputSettings = presetSettingEncoder.audioSettings
+//        
+//
+//        guard self.assetWriter.canApply(outputSettings: videoOutputSettings, forMediaType: AVMediaType.video) else {
+//            fatalError("Negative [VIDEO] : Can't apply the Output settings...")
+//        }
+//        guard self.assetWriter.canApply(outputSettings: audioOutputSettings, forMediaType: AVMediaType.audio) else {
+//            fatalError("Negative [AUDIO] : Can't apply the Output settings...")
+//        }
+//        
+//        self.videoInputWriter = AVAssetWriterInput(mediaType: AVMediaType.video, outputSettings: videoOutputSettings)
+//        self.videoInputWriter.expectsMediaDataInRealTime = true
+//        self.videoInputWriter.transform = CGAffineTransform(rotationAngle: UIDevice.orientationTransformation())
+//        
+//        self.audioInputWriter = AVAssetWriterInput(mediaType: AVMediaType.audio, outputSettings: audioOutputSettings)
+//        self.audioInputWriter.expectsMediaDataInRealTime = true
+//        
+//        if self.assetWriter.canAdd(self.videoInputWriter) {
+//            self.assetWriter.add(self.videoInputWriter)
+//        }
+//        if self.assetWriter.canAdd(self.audioInputWriter) {
+//            self.assetWriter.add(self.audioInputWriter)
+//        }
+//        
+////        let sourcePixelBufferAttributesDictionary: [String : Any] = [
+////            String(kCVPixelBufferPixelFormatTypeKey) : Int(kCVPixelFormatType_32BGRA),
+////            String(kCVPixelBufferWidthKey) : Int(720),
+////            String(kCVPixelBufferHeightKey) : Int(1280),
+////            String(kCVPixelFormatOpenGLESCompatibility) : kCFBooleanTrue
+////        ]
+//        
+////        assetWriterPixelBufferInput = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoInputWriter, sourcePixelBufferAttributes: sourcePixelBufferAttributesDictionary)
+//        assetWriterPixelBufferInput = AVAssetWriterInputPixelBufferAdaptor(assetWriterInput: videoInputWriter)
+//
+//    }
     
     func startWriting(_ url: URL) {
         self.firstFrame = false
@@ -285,10 +315,9 @@ class VideoWriter {
                 self.assetWriter.startSession(atSourceTime: startTime)
             }
             
-            if self.audioInputWriter.isReadyForMoreMediaData {
-                self.audioInputWriter.append(sampleBuffer)
-            }
-            
+//            if self.audioInputWriter.isReadyForMoreMediaData {
+//                self.audioInputWriter.append(sampleBuffer)
+//            }
         }
     }
     
