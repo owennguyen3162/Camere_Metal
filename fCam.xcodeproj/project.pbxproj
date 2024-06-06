@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0369B59E2B0767B1005EA6A7 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0369B59D2B0767B1005EA6A7 /* CameraView.swift */; };
+		0369B5A12B08606B005EA6A7 /* FileManagerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0369B5A02B08606B005EA6A7 /* FileManagerService.swift */; };
+		0369B5A52B08735D005EA6A7 /* VideoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0369B5A42B08735D005EA6A7 /* VideoWriter.swift */; };
+		03B556A82B067CCB000AFC83 /* fCamApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556A72B067CCB000AFC83 /* fCamApp.swift */; };
+		03B556AA2B067CCB000AFC83 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556A92B067CCB000AFC83 /* ContentView.swift */; };
+		03B556AC2B067CCC000AFC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B556AB2B067CCC000AFC83 /* Assets.xcassets */; };
+		03B556AF2B067CCC000AFC83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B556AE2B067CCC000AFC83 /* Preview Assets.xcassets */; };
+		03B556B92B067CCC000AFC83 /* fCamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B556B82B067CCC000AFC83 /* fCamTests.swift */; };
+		03FDB7A62B08FA1000D1D196 /* CameraPreviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7A52B08FA1000D1D196 /* CameraPreviewScreen.swift */; };
+		03FDB7A82B08FA3C00D1D196 /* CameraPreviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7A72B08FA3C00D1D196 /* CameraPreviewViewModel.swift */; };
+		03FDB7AA2B08FEE500D1D196 /* RecordingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7A92B08FEE500D1D196 /* RecordingButton.swift */; };
+		03FDB7AC2B09015E00D1D196 /* RGBButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7AB2B09015E00D1D196 /* RGBButtonView.swift */; };
+		03FDB7AE2B09218400D1D196 /* ColorFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7AD2B09218400D1D196 /* ColorFilter.swift */; };
+		03FDB7B02B09251500D1D196 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7AF2B09251500D1D196 /* CapturedImageView.swift */; };
+		03FDB7B22B092A0900D1D196 /* CameraPreviewViewModelInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7B12B092A0900D1D196 /* CameraPreviewViewModelInterface.swift */; };
+		03FDB7B42B092A3700D1D196 /* CameraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7B32B092A3700D1D196 /* CameraController.swift */; };
+		03FDB7B92B092B0D00D1D196 /* CameraController+CameraActionable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7B82B092B0D00D1D196 /* CameraController+CameraActionable.swift */; };
+		03FDB7BB2B092B4000D1D196 /* CameraController+NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7BA2B092B4000D1D196 /* CameraController+NotificationCenter.swift */; };
+		03FDB7BD2B092BCA00D1D196 /* CameraController+CaptureOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7BC2B092BCA00D1D196 /* CameraController+CaptureOutput.swift */; };
+		03FDB7BF2B092C5400D1D196 /* CameraController+MTKViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7BE2B092C5400D1D196 /* CameraController+MTKViewDelegate.swift */; };
+		03FDB7C12B092C8B00D1D196 /* CameraController+CameraSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FDB7C02B092C8B00D1D196 /* CameraController+CameraSetup.swift */; };
+		A43148E72C118C4900B5F4EB /* XibBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43148E62C118C4900B5F4EB /* XibBasedView.swift */; };
+		A43148EC2C118D9000B5F4EB /* DrawingCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43148EA2C118D9000B5F4EB /* DrawingCanvas.swift */; };
+		A43148ED2C118D9000B5F4EB /* DrawingCanvas.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43148EB2C118D9000B5F4EB /* DrawingCanvas.xib */; };
+		A4AF98352C1175D900C00280 /* ResizeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF98342C1175D900C00280 /* ResizeClass.swift */; };
+		A4AF98382C11760400C00280 /* Extension_Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF98372C11760400C00280 /* Extension_Resize.swift */; };
+		A4AF983A2C1176DC00C00280 /* Processor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF98392C1176DC00C00280 /* Processor.swift */; };
+		A4AF983C2C1176F200C00280 /* Extension_UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AF983B2C1176F200C00280 /* Extension_UIImage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03B556B52B067CCC000AFC83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03B5569C2B067CCB000AFC83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03B556A32B067CCB000AFC83;
+			remoteInfo = fCam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0369B5992B076734005EA6A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0369B59D2B0767B1005EA6A7 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		0369B5A02B08606B005EA6A7 /* FileManagerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerService.swift; sourceTree = "<group>"; };
+		0369B5A42B08735D005EA6A7 /* VideoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoWriter.swift; sourceTree = "<group>"; };
+		03B556A42B067CCB000AFC83 /* fCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B556A72B067CCB000AFC83 /* fCamApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fCamApp.swift; sourceTree = "<group>"; };
+		03B556A92B067CCB000AFC83 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03B556AB2B067CCC000AFC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03B556AE2B067CCC000AFC83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03B556B42B067CCC000AFC83 /* fCamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fCamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B556B82B067CCC000AFC83 /* fCamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fCamTests.swift; sourceTree = "<group>"; };
+		03FDB7A52B08FA1000D1D196 /* CameraPreviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewScreen.swift; sourceTree = "<group>"; };
+		03FDB7A72B08FA3C00D1D196 /* CameraPreviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewViewModel.swift; sourceTree = "<group>"; };
+		03FDB7A92B08FEE500D1D196 /* RecordingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingButton.swift; sourceTree = "<group>"; };
+		03FDB7AB2B09015E00D1D196 /* RGBButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBButtonView.swift; sourceTree = "<group>"; };
+		03FDB7AD2B09218400D1D196 /* ColorFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorFilter.swift; sourceTree = "<group>"; };
+		03FDB7AF2B09251500D1D196 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
+		03FDB7B12B092A0900D1D196 /* CameraPreviewViewModelInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreviewViewModelInterface.swift; sourceTree = "<group>"; };
+		03FDB7B32B092A3700D1D196 /* CameraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
+		03FDB7B82B092B0D00D1D196 /* CameraController+CameraActionable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraController+CameraActionable.swift"; sourceTree = "<group>"; };
+		03FDB7BA2B092B4000D1D196 /* CameraController+NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraController+NotificationCenter.swift"; sourceTree = "<group>"; };
+		03FDB7BC2B092BCA00D1D196 /* CameraController+CaptureOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraController+CaptureOutput.swift"; sourceTree = "<group>"; };
+		03FDB7BE2B092C5400D1D196 /* CameraController+MTKViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraController+MTKViewDelegate.swift"; sourceTree = "<group>"; };
+		03FDB7C02B092C8B00D1D196 /* CameraController+CameraSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraController+CameraSetup.swift"; sourceTree = "<group>"; };
+		A43148E62C118C4900B5F4EB /* XibBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibBasedView.swift; sourceTree = "<group>"; };
+		A43148EA2C118D9000B5F4EB /* DrawingCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvas.swift; sourceTree = "<group>"; };
+		A43148EB2C118D9000B5F4EB /* DrawingCanvas.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingCanvas.xib; sourceTree = "<group>"; };
+		A4AF98342C1175D900C00280 /* ResizeClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizeClass.swift; sourceTree = "<group>"; };
+		A4AF98372C11760400C00280 /* Extension_Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_Resize.swift; sourceTree = "<group>"; };
+		A4AF98392C1176DC00C00280 /* Processor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processor.swift; sourceTree = "<group>"; };
+		A4AF983B2C1176F200C00280 /* Extension_UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIImage.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03B556A12B067CCB000AFC83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B556B12B067CCC000AFC83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0369B59C2B0767A0005EA6A7 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				03FDB7B62B092A8000D1D196 /* View */,
+				03FDB7B52B092A6B00D1D196 /* CameraController */,
+				03FDB7A52B08FA1000D1D196 /* CameraPreviewScreen.swift */,
+				03FDB7A72B08FA3C00D1D196 /* CameraPreviewViewModel.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		0369B59F2B08605B005EA6A7 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0369B5A02B08606B005EA6A7 /* FileManagerService.swift */,
+				0369B5A42B08735D005EA6A7 /* VideoWriter.swift */,
+				03FDB7AD2B09218400D1D196 /* ColorFilter.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		03B5569B2B067CCB000AFC83 = {
+			isa = PBXGroup;
+			children = (
+				03B556A62B067CCB000AFC83 /* fCam */,
+				03B556B72B067CCC000AFC83 /* fCamTests */,
+				03B556A52B067CCB000AFC83 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03B556A52B067CCB000AFC83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03B556A42B067CCB000AFC83 /* fCam.app */,
+				03B556B42B067CCC000AFC83 /* fCamTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03B556A62B067CCB000AFC83 /* fCam */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF98362C1175F400C00280 /* Extension */,
+				A4AF98332C1175D900C00280 /* Utils */,
+				0369B59F2B08605B005EA6A7 /* Helper */,
+				0369B59C2B0767A0005EA6A7 /* Camera */,
+				0369B5992B076734005EA6A7 /* Info.plist */,
+				03B556A72B067CCB000AFC83 /* fCamApp.swift */,
+				03B556A92B067CCB000AFC83 /* ContentView.swift */,
+				03B556AB2B067CCC000AFC83 /* Assets.xcassets */,
+				03B556AD2B067CCC000AFC83 /* Preview Content */,
+			);
+			path = fCam;
+			sourceTree = "<group>";
+		};
+		03B556AD2B067CCC000AFC83 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03B556AE2B067CCC000AFC83 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03B556B72B067CCC000AFC83 /* fCamTests */ = {
+			isa = PBXGroup;
+			children = (
+				03B556B82B067CCC000AFC83 /* fCamTests.swift */,
+			);
+			path = fCamTests;
+			sourceTree = "<group>";
+		};
+		03FDB7B52B092A6B00D1D196 /* CameraController */ = {
+			isa = PBXGroup;
+			children = (
+				03FDB7B12B092A0900D1D196 /* CameraPreviewViewModelInterface.swift */,
+				03FDB7B32B092A3700D1D196 /* CameraController.swift */,
+				03FDB7B82B092B0D00D1D196 /* CameraController+CameraActionable.swift */,
+				03FDB7BA2B092B4000D1D196 /* CameraController+NotificationCenter.swift */,
+				03FDB7BC2B092BCA00D1D196 /* CameraController+CaptureOutput.swift */,
+				03FDB7BE2B092C5400D1D196 /* CameraController+MTKViewDelegate.swift */,
+				03FDB7C02B092C8B00D1D196 /* CameraController+CameraSetup.swift */,
+				A4AF98392C1176DC00C00280 /* Processor.swift */,
+			);
+			path = CameraController;
+			sourceTree = "<group>";
+		};
+		03FDB7B62B092A8000D1D196 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03FDB7A92B08FEE500D1D196 /* RecordingButton.swift */,
+				03FDB7AB2B09015E00D1D196 /* RGBButtonView.swift */,
+				03FDB7AF2B09251500D1D196 /* CapturedImageView.swift */,
+				0369B59D2B0767B1005EA6A7 /* CameraView.swift */,
+				A43148E62C118C4900B5F4EB /* XibBasedView.swift */,
+				A43148EA2C118D9000B5F4EB /* DrawingCanvas.swift */,
+				A43148EB2C118D9000B5F4EB /* DrawingCanvas.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4AF98332C1175D900C00280 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF98342C1175D900C00280 /* ResizeClass.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A4AF98362C1175F400C00280 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4AF98372C11760400C00280 /* Extension_Resize.swift */,
+				A4AF983B2C1176F200C00280 /* Extension_UIImage.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03B556A32B067CCB000AFC83 /* fCam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B556C82B067CCC000AFC83 /* Build configuration list for PBXNativeTarget "fCam" */;
+			buildPhases = (
+				03B556A02B067CCB000AFC83 /* Sources */,
+				03B556A12B067CCB000AFC83 /* Frameworks */,
+				03B556A22B067CCB000AFC83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fCam;
+			productName = fCam;
+			productReference = 03B556A42B067CCB000AFC83 /* fCam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03B556B32B067CCC000AFC83 /* fCamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03B556CB2B067CCC000AFC83 /* Build configuration list for PBXNativeTarget "fCamTests" */;
+			buildPhases = (
+				03B556B02B067CCC000AFC83 /* Sources */,
+				03B556B12B067CCC000AFC83 /* Frameworks */,
+				03B556B22B067CCC000AFC83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03B556B62B067CCC000AFC83 /* PBXTargetDependency */,
+			);
+			name = fCamTests;
+			productName = fCamTests;
+			productReference = 03B556B42B067CCC000AFC83 /* fCamTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03B5569C2B067CCB000AFC83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					03B556A32B067CCB000AFC83 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					03B556B32B067CCC000AFC83 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 03B556A32B067CCB000AFC83;
+					};
+				};
+			};
+			buildConfigurationList = 03B5569F2B067CCB000AFC83 /* Build configuration list for PBXProject "fCam" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03B5569B2B067CCB000AFC83;
+			productRefGroup = 03B556A52B067CCB000AFC83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03B556A32B067CCB000AFC83 /* fCam */,
+				03B556B32B067CCC000AFC83 /* fCamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03B556A22B067CCB000AFC83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B556AF2B067CCC000AFC83 /* Preview Assets.xcassets in Resources */,
+				03B556AC2B067CCC000AFC83 /* Assets.xcassets in Resources */,
+				A43148ED2C118D9000B5F4EB /* DrawingCanvas.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B556B22B067CCC000AFC83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03B556A02B067CCB000AFC83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03FDB7BD2B092BCA00D1D196 /* CameraController+CaptureOutput.swift in Sources */,
+				03FDB7A62B08FA1000D1D196 /* CameraPreviewScreen.swift in Sources */,
+				A4AF983A2C1176DC00C00280 /* Processor.swift in Sources */,
+				A4AF983C2C1176F200C00280 /* Extension_UIImage.swift in Sources */,
+				0369B5A12B08606B005EA6A7 /* FileManagerService.swift in Sources */,
+				03FDB7BB2B092B4000D1D196 /* CameraController+NotificationCenter.swift in Sources */,
+				0369B59E2B0767B1005EA6A7 /* CameraView.swift in Sources */,
+				03FDB7B22B092A0900D1D196 /* CameraPreviewViewModelInterface.swift in Sources */,
+				03FDB7AA2B08FEE500D1D196 /* RecordingButton.swift in Sources */,
+				A43148E72C118C4900B5F4EB /* XibBasedView.swift in Sources */,
+				A4AF98352C1175D900C00280 /* ResizeClass.swift in Sources */,
+				03FDB7AE2B09218400D1D196 /* ColorFilter.swift in Sources */,
+				03B556AA2B067CCB000AFC83 /* ContentView.swift in Sources */,
+				0369B5A52B08735D005EA6A7 /* VideoWriter.swift in Sources */,
+				A43148EC2C118D9000B5F4EB /* DrawingCanvas.swift in Sources */,
+				03B556A82B067CCB000AFC83 /* fCamApp.swift in Sources */,
+				03FDB7B92B092B0D00D1D196 /* CameraController+CameraActionable.swift in Sources */,
+				03FDB7A82B08FA3C00D1D196 /* CameraPreviewViewModel.swift in Sources */,
+				03FDB7C12B092C8B00D1D196 /* CameraController+CameraSetup.swift in Sources */,
+				03FDB7AC2B09015E00D1D196 /* RGBButtonView.swift in Sources */,
+				A4AF98382C11760400C00280 /* Extension_Resize.swift in Sources */,
+				03FDB7BF2B092C5400D1D196 /* CameraController+MTKViewDelegate.swift in Sources */,
+				03FDB7B42B092A3700D1D196 /* CameraController.swift in Sources */,
+				03FDB7B02B09251500D1D196 /* CapturedImageView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03B556B02B067CCC000AFC83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03B556B92B067CCC000AFC83 /* fCamTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03B556B62B067CCC000AFC83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03B556A32B067CCB000AFC83 /* fCam */;
+			targetProxy = 03B556B52B067CCC000AFC83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03B556C62B067CCC000AFC83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03B556C72B067CCC000AFC83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03B556C92B067CCC000AFC83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fCam/Preview Content\"";
+				DEVELOPMENT_TEAM = 9P8FNHPWDK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fCam/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable to see our magic filter";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exception.fCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03B556CA2B067CCC000AFC83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"fCam/Preview Content\"";
+				DEVELOPMENT_TEAM = 9P8FNHPWDK;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fCam/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Enable to see our magic filter";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exception.fCam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		03B556CC2B067CCC000AFC83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNSUAA9FB3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exception.fCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fCam";
+			};
+			name = Debug;
+		};
+		03B556CD2B067CCC000AFC83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZNSUAA9FB3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.exception.fCamTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fCam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/fCam";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03B5569F2B067CCB000AFC83 /* Build configuration list for PBXProject "fCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B556C62B067CCC000AFC83 /* Debug */,
+				03B556C72B067CCC000AFC83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B556C82B067CCC000AFC83 /* Build configuration list for PBXNativeTarget "fCam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B556C92B067CCC000AFC83 /* Debug */,
+				03B556CA2B067CCC000AFC83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03B556CB2B067CCC000AFC83 /* Build configuration list for PBXNativeTarget "fCamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03B556CC2B067CCC000AFC83 /* Debug */,
+				03B556CD2B067CCC000AFC83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03B5569C2B067CCB000AFC83 /* Project object */;
+}
